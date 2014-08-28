@@ -159,9 +159,6 @@ class MyHtopView:
     def connect(self):
         self.model.connect()
 
-    def get_server_status(self):
-        return self.model.get_server_status()
-
     def set_status_header(self):
         txt = self.model.get_server_status()
         split = txt.split()
