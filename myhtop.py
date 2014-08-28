@@ -105,9 +105,12 @@ class MyHtopView:
             self.kill_process()
 
     def kill_process(self):
-        (focus_widget, widget_pos) = self.listbox.get_focus()
-        id = int(focus_widget.id.get_text()[0])
-        self.model.connection.kill(id)
+        try:
+            (focus_widget, widget_pos) = self.listbox.get_focus()
+            id = int(focus_widget.id.get_text()[0])
+            self.model.connection.kill(id)
+        except:
+            pass
 
     def main(self):
 
