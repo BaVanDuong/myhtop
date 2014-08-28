@@ -4,4 +4,4 @@ Screenshot:
 
 
 
-![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
+![solarized vim](https://github.com/BaVanDuong/myhtop/blob/master/screenshot.png)
