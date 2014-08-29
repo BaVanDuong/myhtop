@@ -94,7 +94,6 @@ class MyHtopView:
             ('body', 'dark blue', '', 'standout'), ]
 
         self.process_alarm = None
-        self.process_lists = []
         self.model = MyHtopModel(kwargs)
         self.connect()
 
@@ -187,13 +186,13 @@ def main():
         -H, --host      Default localhost
     '''
     parser = optparse.OptionParser(usage=usage)
-    parser.add_option('-P', '--port', dest='port', default=3306, type=int)
-    parser.add_option('-u', '--user', dest='user', default='root', type=str)
+    parser.add_option('-P', '--port', dest='port', default=3306, type="int")
+    parser.add_option('-u', '--user', dest='user', default='root', type="str")
     parser.add_option(
-        '-p', '--passwd', dest='passwd', default='root', type=str)
+        '-p', '--passwd', dest='passwd', default='root', type="str")
 
     parser.add_option(
-        '-H', '--host', dest='host', default='localhost', type=str)
+        '-H', '--host', dest='host', default='localhost', type="str")
     (option, args) = parser.parse_args()
     try:
         mainwin = MyHtopView({'user': option.user, 'passwd': option.passwd,
